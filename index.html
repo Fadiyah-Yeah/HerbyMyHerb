@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANALYST CARD</title>
+    <style>
+        body {
+            font-family: 'Andale Mono', monospace;
+            background-color: #D5E4CF;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #38422B;
+            margin-bottom: 20px;
+        }
+        section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 10px;
+            padding: 10px;
+        }
+        footer {
+            text-align: center;
+            font-size: 10px;
+            color: #A38F85;
+        }
+        .start, .ulang-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .start:hover, .ulang-button:hover {
+            background-color: #45a049;
+        }
+        .large-rectangular {
+            display: block; /* Menjadikan tombol berada di baris baru */
+            width: 100%; /* Memastikan tombol memiliki lebar penuh */
+            max-width: 300px; /* Batasan lebar tombol */
+            margin: 10px auto; /* Memberikan jarak antar tombol dan membuatnya berada di tengah */
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .large-rectangular:hover {
+            background-color: #45a049;
+        }
+        /* #quiz {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        .soal-container {
+            width: 80%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        } */
+        .large-rectangular {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+        }
+        img{
+            width:100%;
+            aspect-ratio: 3/2;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><b>HERBY MY HERB</b></h1>
+    </header>
+    <img src="img/1.gif" alt="">
+    <br>
+    <div class="page-awal" id="pageAwal">
+        <div class="button-group">
+            <button id="mulai" class="start">Start</button>
+            <button class="start" onclick="window.open('card.html', '_blank')">Card</button>
+        </div>
+    </div>
+    <br><br>
+    <section>
+        <div class="quiz container row-col-md-12" id="quiz" style="display: none; width: 20rem;">
+            <div id="kuis">
+                <!-- Tampilan kuis melalui JavaScript -->
+            </div>
+            <div id="hasil" style="display: block;">
+                <p id="teksHasil"></p> <!-- Teks hasil kuis -->
+                <div class="gambar">
+                    <img id="gambar" src="" alt="hasil">
+                </div>
+            </div>            
+        </div> 
+        <button id="ulang" class="ulang-button" style="display: none;">Ulangi</button>
+    </section>
+   
+    <footer>
+        <p>Please don't use my herbs without permission</p>
+        <p>A silly quiz made by @Fadiyah-Yeah</p>
+    </footer>
+
+    <script src="scrip.js" defer></script>
+
+</body>
+</html>
